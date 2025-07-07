@@ -1,0 +1,11 @@
+import java.util.*;
+
+public class ListExample5 {
+    public static void main(String[] args) {
+        List<String> animals = new ArrayList<>(Arrays.asList("Cat", "Dog", "Elephant", "Dog"));
+
+        System.out.println("Animals List: " + animals);
+        System.out.println("Index of Dog: " + animals.indexOf("Dog"));
+        System.out.println("Last Index of Dog: " + animals.lastIndexOf("Dog"));
+    }
+}
