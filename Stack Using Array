@@ -1,0 +1,33 @@
+class StackArray {
+    int maxSize;
+    int top;
+    int[] stack;
+
+    StackArray(int size) {
+        maxSize = size;
+        stack = new int[maxSize];
+        top = -1;
+    }
+
+    void push(int value) {
+        if (top >= maxSize - 1) {
+            System.out.println("Stack Overflow");
+        } else {
+            stack[++top] = value;
+        }
+    }
+
+    int pop() {
+        if (top < 0) {
+            System.out.println("Stack Underflow");
+            return -1;
+        } else {
+            return stack[top--];
+        }
+    }
+    void display() {
+        for (int i = top; i >= 0; i--) {
+            System.out.println(stack[i]);
+        }
+    }
+}
