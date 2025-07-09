@@ -1,0 +1,58 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueOperations {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+        queue.add("Compiler");
+        queue.add("Firewall");
+        queue.add("Algorithm");
+        queue.add("Protocol");
+        queue.add("Cache");
+
+        System.out.println("Initial Queue: " + queue);
+
+        // Question 1: Two dequeue operations
+        String dequeued1 = queue.poll();
+        String dequeued2 = queue.poll();
+        System.out.println("\nAfter two dequeues:");
+        System.out.println("Dequeued elements: " + dequeued1 + ", " + dequeued2);
+        System.out.println("Queue now: " + queue);
+
+        // Question 2: Enqueue "Virtualization"
+        queue.add("Virtualization");
+        System.out.println("\nAfter enqueue 'Virtualization':");
+        System.out.println("Queue now: " + queue);
+
+        // Question 3: One dequeue operation
+        String dequeued3 = queue.poll();
+        System.out.println("\nAfter one dequeue:");
+        System.out.println("Dequeued element: " + dequeued3);
+        System.out.println("Queue now: " + queue);
+
+        // Question 4: Enqueue "Cloud"
+        queue.add("Cloud");
+        System.out.println("\nAfter enqueue 'Cloud':");
+        System.out.println("Queue now: " + queue);
+
+        // Question 5: Check if "Protocol" is present
+        boolean containsProtocol = queue.contains("Protocol");
+        System.out.println("\nIs 'Protocol' present? " + (containsProtocol ? "Yes" : "No"));
+
+        // Question 6: Enqueue "Machine Learning"
+        queue.add("Machine Learning");
+        System.out.println("\nAfter enqueue 'Machine Learning':");
+        System.out.println("Queue now: " + queue);
+
+        // Question 7: One final dequeue
+        String dequeuedFinal = queue.poll();
+        System.out.println("\nAfter one final dequeue:");
+        System.out.println("Dequeued element: " + dequeuedFinal);
+        System.out.println("Final state of the queue: " + queue);
+
+        // Question 8 (Concept Check):
+        System.out.println("\nConcept Check:");
+        System.out.println("Element at position 3 in original queue: Algorithm");
+        System.out.println("It was dequeued in Question 3 (the third dequeue operation).");
+    }
+}
