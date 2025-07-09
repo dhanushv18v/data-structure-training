@@ -1,0 +1,165 @@
+// 1. Length Calculation
+public class LengthCalculation {
+    public static void main(String[] args) {
+        String brand = "Lenovo";
+        System.out.println("Length of '" + brand + "' is: " + brand.length());
+    }
+}
+
+// 2. Concatenation
+public class Concatenation {
+    public static void main(String[] args) {
+        String brand1 = "Dell";
+        String brand2 = "HP";
+        String combined = brand1 + brand2;
+        System.out.println("Concatenated string: " + combined);
+    }
+}
+
+// 3. Character Access
+public class CharacterAccess {
+    public static void main(String[] args) {
+        String brand = "Asus";
+        System.out.println("2nd character is: " + brand.charAt(1));
+    }
+} 
+
+// 4. Traversal
+public class Traversal {
+    public static void main(String[] args) {
+        String brand = "Apple";
+        for (int i = 0; i < brand.length(); i++) {
+            System.out.println(brand.charAt(i));
+        }
+    }
+}
+
+// 5. Uppercase Conversion
+public class UppercaseConversion {
+    public static void main(String[] args) {
+        String brand = "acer";
+        System.out.println("Uppercase: " + brand.toUpperCase());
+    }
+}
+
+// 6. Reverse a Brand Name
+public class ReverseBrand {
+    public static void main(String[] args) {
+        String brand = "MSI";
+        String reversed = new StringBuilder(brand).reverse().toString();
+        System.out.println("Reversed string: " + reversed);
+    }
+}
+
+// 7. Search for a Substring
+public class SearchSubstring {
+    public static void main(String[] args) {
+        String sentence = "Popular brands are Dell, HP, and Lenovo";
+        System.out.println("Contains 'Dell'? " + sentence.contains("Dell"));
+    }
+}
+
+// 8. Count Occurrence
+public class CountOccurrence {
+    public static void main(String[] args) {
+        String brands = "HP, HP, Lenovo, Dell";
+        String[] brandArr = brands.split(", ");
+        int count = 0;
+        for (String b : brandArr) {
+            if (b.equals("HP")) {
+                count++;
+            }
+        }
+        System.out.println("'HP' occurs: " + count + " times");
+    }
+}
+
+// 9. Sorting Brand Names
+import java.util.*;
+
+public class SortBrands {
+    public static void main(String[] args) {
+        List<String> brands = Arrays.asList("Lenovo", "Dell", "HP", "Asus");
+        Collections.sort(brands);
+        System.out.println("Sorted brands: " + brands);
+    }
+}
+
+// 10. Replace a Brand Name
+public class ReplaceBrand {
+    public static void main(String[] args) {
+        String sentence = "Apple is a premium brand";
+        String replaced = sentence.replace("Apple", "MSI");
+        System.out.println(replaced);
+    }
+}
+
+// 11. Palindrome Check
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        String brand = "MSI";
+        String reversed = new StringBuilder(brand).reverse().toString();
+        boolean isPalindrome = brand.equalsIgnoreCase(reversed);
+        System.out.println("Is '" + brand + "' a palindrome? " + isPalindrome);
+    }
+}
+
+// 12. Unique Characters
+import java.util.*;
+
+public class UniqueCharacters {
+    public static void main(String[] args) {
+        String brand = "Lenovo";
+        Set<Character> uniqueChars = new LinkedHashSet<>();
+        for (char c : brand.toCharArray()) {
+            uniqueChars.add(c);
+        }
+        System.out.println("Unique characters: " + uniqueChars);
+    }
+}
+
+// 13. Longest Brand Name
+import java.util.*;
+
+public class LongestBrand {
+    public static void main(String[] args) {
+        List<String> brands = Arrays.asList("Dell", "HP", "Lenovo", "Asus", "Apple", "MSI");
+        String longest = "";
+        for (String b : brands) {
+            if (b.length() > longest.length()) {
+                longest = b;
+            }
+        }
+        System.out.println("Longest brand: " + longest);
+    }
+}
+
+// 14. String Matching (Prefix)
+import java.util.*;
+
+public class BrandsStartingWithA {
+    public static void main(String[] args) {
+        List<String> brands = Arrays.asList("Dell", "HP", "Lenovo", "Asus");
+        List<String> startWithA = new ArrayList<>();
+        for (String b : brands) {
+            if (b.startsWith("A")) {
+                startWithA.add(b);
+            }
+        }
+        System.out.println("Brands starting with 'A': " + startWithA);
+    }
+}
+
+// 15. Frequency Map
+import java.util.*;
+
+public class FrequencyMap {
+    public static void main(String[] args) {
+        String brand = "Apple";
+        Map<Character, Integer> freqMap = new LinkedHashMap<>();
+        for (char c : brand.toCharArray()) {
+            freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
+        }
+        System.out.println("Frequency map: " + freqMap);
+    }
+}
